@@ -1,0 +1,31 @@
+<div class="container">
+    <div>
+    <h2>Modifier une Réservation :</h2>
+    </div>
+    <form >
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >ID Réservation</label>
+    <input readonly  type="text" [(ngModel)]="currentBooking.idBooking"
+    name="idBooking" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" >
+    <label >Nom Client</label>
+    <input type="text"[(ngModel)]= "currentBooking.nomClient"
+    name="nomClient" class="form-control">
+    </div>
+    <div class="col-sm-2 col-md-2 col-lg-2">
+    <label >Nombre de personne</label>
+    <input type="number" [(ngModel)]= "currentBooking.nombre"
+    name="nombre" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4">
+    <label >Date</label>
+    <input type="date" [ngModel]="currentBooking.dateReserv
+    | date: 'yyyy-MM-dd'"(ngModelChange)=" currentBooking.dateReserv= $event" na
+    me="dateReserv" class="form-control">
+    </div>
+    <div class="mt-2">
+    <button type="submit" (click)="updateBooking()" class="btn btn-success">Modifer</button>
+    </div>
+    </form>
+    </div>

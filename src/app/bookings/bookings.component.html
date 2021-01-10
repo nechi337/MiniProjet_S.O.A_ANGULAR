@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="card shadow mb-4">
+    <div class="card-body">
+    <table class="table table-striped">
+    <tr> <th>Id</th><th>Client</th> <th>Nombre de personne</th> <th>Date</th><th>Actions</th> </tr>
+    <tbody *ngFor="let booking of bookings">
+    <tr>
+    <td>{{booking.idBooking}}</td>
+    <td>{{booking.nomClient}}</td>
+    <td>{{booking.nombre}}</td>
+    <td>{{booking.dateReserv | date:'dd/MM/yyyy'}}</td>
+    <td><a class="btn btn-danger" (click)="supprimerBooking(booking)">Supprimer</a>&nbsp;
+        <a class="btn btn-success" [routerLink]="['/updateBooking',booking.idBooking]">Modifier</a>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+    </div>
+    </div>
+    

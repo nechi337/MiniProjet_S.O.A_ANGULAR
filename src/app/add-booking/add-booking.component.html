@@ -1,0 +1,31 @@
+<div class="container">
+    <div>
+    <h2>Réserver maintenant :</h2>
+    </div>
+
+    <form >
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >ID </label>
+        <input type="text" [(ngModel)]="newBooking.idBooking"
+        name="idBooking" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4" >
+        <label >Nom </label>
+        <input type="text"[(ngModel)]= "newBooking.nomClient"
+        name="nomClient" class="form-control">
+        </div>
+        <div class="col-sm-2 col-md-2 col-lg-2">
+        <label >Nombre</label>
+        <input type="number" [(ngModel)]= "newBooking.nombre"
+        name="nombre" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+        <label >Date création</label>
+        <input type="date" [(ngModel)]= "newBooking.dateReserv"
+        name="dateReserv" class="form-control">
+        </div>
+        <div class="mt-2">
+        <button type="submit" (click)="addBooking()" class="btn btn-success">Réserver</button>
+        </div>
+    </form>
+</div>
